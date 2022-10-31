@@ -1,0 +1,858 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>G_Hoteles</class>
+ <widget class="QDialog" name="G_Hoteles">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>903</width>
+    <height>650</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QDialog{
+background-color:qlineargradient(spread:pad, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(255, 170, 0, 255), stop:0.977273 rgba(255, 255, 255, 255));
+border:5px solid white;
+border-radius:7px;
+}</string>
+  </property>
+  <widget class="QTabWidget" name="tabWidget_GH">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>60</y>
+     <width>741</width>
+     <height>571</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QTabWidget::pane{
+position:relative;
+/*background-color: qlineargradient(spread:pad, x1:0, y1:0.556818, x2:0.857955, y2:0.579545, stop:0 rgba(0, 0, 70, 255), stop:1 rgba(28, 181, 224, 255));
+*/
+background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 82, 167, 255), stop:1 rgba(26, 177, 232, 255));
+border:none;
+
+}
+QTabWidget::tab-bar{
+    bottom:1px;
+    left:1.75px
+}
+
+QTabBar{
+background-color:white;
+    border-radius:5px;
+    margin-top:1px;
+}
+
+QTabBar::tab {
+    color:rgb(1,3,52);
+    border:none;
+    min-width:9em;
+    min-height:3em;
+    margin-right:5px;
+
+}
+QTabBar::tab::hover,QTabBar::tab::selected{
+    color:rgb(33,86,250);
+    border:none;
+
+}
+QTabBar::tab::selected{
+    border-bottom:4px solid rgb(85, 170, 255);
+}
+QTabBar::tab:!selected{
+margin-top:4px;
+}</string>
+   </property>
+   <property name="currentIndex">
+    <number>3</number>
+   </property>
+   <widget class="QWidget" name="tab">
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <attribute name="title">
+     <string>Ajout</string>
+    </attribute>
+    <widget class="QPushButton" name="pb_ajouter">
+     <property name="geometry">
+      <rect>
+       <x>350</x>
+       <y>390</y>
+       <width>131</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:0.773, y2:0, stop:0 rgba(0, 143, 222, 255), stop:1 rgba(0, 205, 222, 255));
+border: 2px solid white;
+border-radius:7px;
+color:rgb(255, 255, 255);
+/*border-radius:20px;*/
+}
+QPushButton:hover{
+background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0.04, stop:0 rgba(88, 206, 255, 255), stop:1 rgba(0, 153, 255, 255));
+}
+QPushButton:pressed{
+background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 66, 134, 255), stop:0.977273 rgba(23, 155, 203, 255), stop:1 rgba(255, 255, 255, 255));
+}</string>
+     </property>
+     <property name="text">
+      <string>Ajouter</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="le_nom">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>110</y>
+       <width>131</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit{
+background-color:qlineargradient(spread:pad, x1:0, y1:0.857, x2:0, y2:1, stop:0 rgba(255, 255, 255, 255), stop:1 rgba(139, 139, 139, 255));
+border:none;
+border-radius:7px;
+}</string>
+     </property>
+     <property name="placeholderText">
+      <string>Enter_Hotels_Name</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>110</y>
+       <width>51</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel{
+background-color:none;
+border:none;
+color:rgb(243, 252, 255);
+}</string>
+     </property>
+     <property name="text">
+      <string>Nom     :</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_5">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>170</y>
+       <width>51</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel{
+background-color:none;
+border:none;
+color:rgb(243, 252, 255);
+}</string>
+     </property>
+     <property name="text">
+      <string>Adresse :</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="l_adresse">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>170</y>
+       <width>131</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit{
+background-color:qlineargradient(spread:pad, x1:0, y1:0.857, x2:0, y2:1, stop:0 rgba(255, 255, 255, 255), stop:1 rgba(139, 139, 139, 255));
+border:none;
+border-radius:7px;
+}</string>
+     </property>
+     <property name="placeholderText">
+      <string>Enter_Adress</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_6">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>230</y>
+       <width>51</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel{
+background-color:none;
+border:none;
+color:rgb(243, 252, 255);
+}</string>
+     </property>
+     <property name="text">
+      <string>Num Tel:</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="le_tel">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>230</y>
+       <width>131</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit{
+background-color:qlineargradient(spread:pad, x1:0, y1:0.857, x2:0, y2:1, stop:0 rgba(255, 255, 255, 255), stop:1 rgba(139, 139, 139, 255));
+border:none;
+border-radius:7px;
+}</string>
+     </property>
+     <property name="placeholderText">
+      <string>Enter_Phone_Number</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_7">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>290</y>
+       <width>51</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel{
+background-color:none;
+border:none;
+color:rgb(243, 252, 255);
+}</string>
+     </property>
+     <property name="text">
+      <string>Prix      :</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="le_prix">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>290</y>
+       <width>131</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit{
+background-color:qlineargradient(spread:pad, x1:0, y1:0.857, x2:0, y2:1, stop:0 rgba(255, 255, 255, 255), stop:1 rgba(139, 139, 139, 255));
+border:none;
+border-radius:7px;
+}</string>
+     </property>
+     <property name="placeholderText">
+      <string>Enter_Price</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_log">
+     <property name="geometry">
+      <rect>
+       <x>510</x>
+       <y>280</y>
+       <width>231</width>
+       <height>221</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel{
+background-color:none;
+border:none;
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap>../pngBT.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QDateEdit" name="Date">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>380</y>
+       <width>101</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">Date{
+background-color:qlineargradient(spread:pad, x1:0, y1:0.857, x2:0, y2:1, stop:0 rgba(255, 255, 255, 255), stop:1 rgba(139, 139, 139, 255));
+border:none;
+border-radius:10px;
+}
+QDateEdit{
+border-radius:10px;
+background-color:qlineargradient(spread:pad, x1:0, y1:0.857, x2:0, y2:1, stop:0 rgba(255, 255, 255, 255), stop:1 rgba(139, 139, 139, 255));
+}</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="DateLabel">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>380</y>
+       <width>101</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel{
+color:rgb(253,250,250);
+
+}</string>
+     </property>
+     <property name="text">
+      <string>Check in :</string>
+     </property>
+    </widget>
+    <widget class="QDateEdit" name="Date_2">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>430</y>
+       <width>101</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">Date{
+background-color:qlineargradient(spread:pad, x1:0, y1:0.857, x2:0, y2:1, stop:0 rgba(255, 255, 255, 255), stop:1 rgba(139, 139, 139, 255));
+border:none;
+border-radius:10px;
+}
+QDateEdit{
+border-radius:10px;
+background-color:qlineargradient(spread:pad, x1:0, y1:0.857, x2:0, y2:1, stop:0 rgba(255, 255, 255, 255), stop:1 rgba(139, 139, 139, 255));
+}</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="DateLabel_2">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>430</y>
+       <width>101</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel{
+color:rgb(253,250,250);
+
+}</string>
+     </property>
+     <property name="text">
+      <string>Check out :</string>
+     </property>
+    </widget>
+    <widget class="QGroupBox" name="groupBox_2">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>350</y>
+       <width>261</width>
+       <height>131</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>40</y>
+       <width>211</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>16</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel{
+color:rgb(255, 255, 255);
+}</string>
+     </property>
+     <property name="text">
+      <string>Ajouter un Hotel</string>
+     </property>
+    </widget>
+    <zorder>groupBox_2</zorder>
+    <zorder>pb_ajouter</zorder>
+    <zorder>le_nom</zorder>
+    <zorder>label_3</zorder>
+    <zorder>label_5</zorder>
+    <zorder>l_adresse</zorder>
+    <zorder>label_6</zorder>
+    <zorder>le_tel</zorder>
+    <zorder>label_7</zorder>
+    <zorder>le_prix</zorder>
+    <zorder>label_log</zorder>
+    <zorder>Date</zorder>
+    <zorder>DateLabel</zorder>
+    <zorder>Date_2</zorder>
+    <zorder>DateLabel_2</zorder>
+    <zorder>label_2</zorder>
+   </widget>
+   <widget class="QWidget" name="tab_6">
+    <attribute name="title">
+     <string>Afficher</string>
+    </attribute>
+    <widget class="QTableView" name="tab_hotel">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>40</y>
+       <width>411</width>
+       <height>371</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QTableView{
+border-radius:15px;
+background-color:qlineargradient(spread:pad, x1:1, y1:0.824, x2:1, y2:0.977, stop:0 rgba(255, 255, 255, 255), stop:1 rgba(69, 87, 96, 255));
+}</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_5">
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <attribute name="title">
+     <string>Supprimer</string>
+    </attribute>
+    <widget class="QLabel" name="label_12">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>170</y>
+       <width>101</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel{
+background-color:none;
+border:none;
+color:rgb(243, 252, 255);
+}</string>
+     </property>
+     <property name="text">
+      <string>Hotel a supprimé  :     </string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="le_hotel_supp">
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>170</y>
+       <width>181</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit{
+background-color:none;
+border:none;
+border-radius:7px;
+}</string>
+     </property>
+     <property name="placeholderText">
+      <string>Enter_Hotels_Id</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pb_supprimer">
+     <property name="geometry">
+      <rect>
+       <x>400</x>
+       <y>170</y>
+       <width>131</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:0.773, y2:0, stop:0 rgba(0, 143, 222, 255), stop:1 rgba(0, 205, 222, 255));
+border: 2px solid white;
+border-radius:7px;
+/*border-radius:20px;*/
+}
+QPushButton:hover{
+background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0.04, stop:0 rgba(88, 206, 255, 255), stop:1 rgba(0, 153, 255, 255));
+}
+QPushButton:pressed{
+background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 66, 134, 255), stop:0.977273 rgba(23, 155, 203, 255), stop:1 rgba(255, 255, 255, 255));
+}</string>
+     </property>
+     <property name="text">
+      <string>Supprimé</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_2">
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <attribute name="title">
+     <string>Modifier</string>
+    </attribute>
+    <widget class="QLineEdit" name="lineEdit_3">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>40</y>
+       <width>181</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit{
+background-color:qlineargradient(spread:pad, x1:0, y1:0.857, x2:0, y2:1, stop:0 rgba(255, 255, 255, 255), stop:1 rgba(139, 139, 139, 255));
+border:none;
+border-radius:7px;
+}</string>
+     </property>
+     <property name="placeholderText">
+      <string>Enter_Hotels_Name</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>40</y>
+       <width>91</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel{
+background-color:none;
+border:none;
+color:rgb(243, 252, 255);
+}</string>
+     </property>
+     <property name="text">
+      <string>Hotel a modifié  :     </string>
+     </property>
+    </widget>
+    <widget class="QGroupBox" name="groupBox">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>140</y>
+       <width>311</width>
+       <height>281</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string/>
+     </property>
+     <widget class="QLineEdit" name="modif_adresse">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>110</y>
+        <width>131</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit{
+background-color:qlineargradient(spread:pad, x1:0, y1:0.857, x2:0, y2:1, stop:0 rgba(255, 255, 255, 255), stop:1 rgba(139, 139, 139, 255));
+border:none;
+border-radius:7px;
+}</string>
+      </property>
+      <property name="placeholderText">
+       <string>Enter_Adress</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="modif_nom">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>50</y>
+        <width>131</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit{
+background-color:qlineargradient(spread:pad, x1:0, y1:0.857, x2:0, y2:1, stop:0 rgba(255, 255, 255, 255), stop:1 rgba(139, 139, 139, 255));
+border:none;
+border-radius:7px;
+}</string>
+      </property>
+      <property name="placeholderText">
+       <string>Enter_Hotels_Name</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_8">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>110</y>
+        <width>51</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{
+background-color:none;
+border:none;
+color:rgb(243, 252, 255);
+}</string>
+      </property>
+      <property name="text">
+       <string>Adresse :</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_10">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>50</y>
+        <width>51</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{
+background-color:none;
+border:none;
+color:rgb(243, 252, 255);
+}</string>
+      </property>
+      <property name="text">
+       <string>Nom     :</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_11">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>170</y>
+        <width>51</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{
+background-color:none;
+border:none;
+color:rgb(243, 252, 255);
+}</string>
+      </property>
+      <property name="text">
+       <string>Num Tel:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_9">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>230</y>
+        <width>51</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{
+background-color:none;
+border:none;
+color:rgb(243, 252, 255);
+}</string>
+      </property>
+      <property name="text">
+       <string>Prix      :</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="modif_tel">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>170</y>
+        <width>131</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit{
+background-color:qlineargradient(spread:pad, x1:0, y1:0.857, x2:0, y2:1, stop:0 rgba(255, 255, 255, 255), stop:1 rgba(139, 139, 139, 255));
+border:none;
+border-radius:7px;
+}</string>
+      </property>
+      <property name="placeholderText">
+       <string>Enter_Phone_Number</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="modif_prix">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>230</y>
+        <width>131</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit{
+background-color:qlineargradient(spread:pad, x1:0, y1:0.857, x2:0, y2:1, stop:0 rgba(255, 255, 255, 255), stop:1 rgba(139, 139, 139, 255));
+border:none;
+border-radius:7px;
+}</string>
+      </property>
+      <property name="placeholderText">
+       <string>Enter_Price</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QPushButton" name="pb_modifier">
+     <property name="geometry">
+      <rect>
+       <x>370</x>
+       <y>370</y>
+       <width>131</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:0.773, y2:0, stop:0 rgba(0, 143, 222, 255), stop:1 rgba(0, 205, 222, 255));
+border: 2px solid white;
+border-radius:7px;
+/*border-radius:20px;*/
+}
+QPushButton:hover{
+background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0.04, stop:0 rgba(88, 206, 255, 255), stop:1 rgba(0, 153, 255, 255));
+}
+QPushButton:pressed{
+background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 66, 134, 255), stop:0.977273 rgba(23, 155, 203, 255), stop:1 rgba(255, 255, 255, 255));
+}</string>
+     </property>
+     <property name="text">
+      <string>Modifier</string>
+     </property>
+    </widget>
+    <zorder>groupBox</zorder>
+    <zorder>lineEdit_3</zorder>
+    <zorder>label_4</zorder>
+    <zorder>pb_modifier</zorder>
+   </widget>
+   <widget class="QWidget" name="tab_4">
+    <attribute name="title">
+     <string>Promo</string>
+    </attribute>
+   </widget>
+   <widget class="QWidget" name="tab_7">
+    <property name="styleSheet">
+     <string notr="true">QWidget{
+background-color:qlineargradient(spread:pad, x1:1, y1:0.824, x2:1, y2:0.159, stop:0 rgba(255, 255, 255, 255), stop:1 rgba(183, 233, 255, 255));
+border:4px solid white;
+}
+</string>
+    </property>
+    <attribute name="title">
+     <string>Stat</string>
+    </attribute>
+   </widget>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>20</y>
+     <width>111</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+background-color:rgb(130, 218, 255);
+border:none;
+border-radius:7px;
+}</string>
+   </property>
+   <property name="text">
+    <string>    Gestion Hoteles</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
