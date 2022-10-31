@@ -1,0 +1,767 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>VoyageInterface</class>
+ <widget class="QDialog" name="VoyageInterface">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1098</width>
+    <height>637</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QTabWidget" name="tabWidget">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>-10</y>
+     <width>1101</width>
+     <height>821</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Euclid Circular A</family>
+     <pointsize>9</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>ArrowCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QTabWidget::pane{
+position:relative;
+	/*background-color: qlineargradient(spread:pad, x1:0, y1:0.556818, x2:0.857955, y2:0.579545, stop:0 rgba(0, 0, 70, 255), stop:1 rgba(28, 181, 224, 255));*/
+background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 82, 167, 255), stop:1 rgba(26, 177, 232, 255));
+/*border-image:url(:/new/image/backg.png);*/
+/*background-color:qlineargradient(spread:pad, x1:0, y1:0.482955, x2:1, y2:0.517, stop:0.0454545 rgba(202, 197, 49, 255), stop:1 rgba(243, 249, 167, 255));*/
+border:none;
+
+}
+QTabWidget::tab-bar{
+	bottom:1px;
+	left:1.75px
+}
+
+QTabBar{
+background-color:white;
+	border-radius:5px;
+	margin-top:1px;
+}
+
+QTabBar::tab {
+	color:rgb(1,3,52);
+	border:none;
+	min-width:9em;
+	min-height:3em;
+	margin-right:5px;
+
+}
+QTabBar::tab::hover,QTabBar::tab::selected{
+	color:rgb(33,86,250);
+	border:none;
+
+}
+QTabBar::tab::selected{
+	border-bottom:4px solid rgb(33,86,250);
+}
+QTabBar::tab:!selected{
+margin-top:4px;
+}
+
+</string>
+   </property>
+   <property name="currentIndex">
+    <number>0</number>
+   </property>
+   <widget class="QWidget" name="tab">
+    <attribute name="title">
+     <string>Gestion Voyages</string>
+    </attribute>
+    <widget class="QLineEdit" name="Destination">
+     <property name="geometry">
+      <rect>
+       <x>480</x>
+       <y>590</y>
+       <width>201</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit{
+background-color:rgba(0, 0, 0, 0);
+border:none;
+border-bottom:2px solid qlineargradient(spread:pad, x1:0, y1:0.551, x2:0.857955, y2:0.579545, stop:0 rgba(28, 181, 224, 255), stop:0.676136 rgba(16, 105, 170, 255), stop:1 rgba(0, 0, 70, 255));
+qproperty-alignment: AlignCenter;
+padding-bottom:7px;
+/*color:rgb(157, 177, 202);*/
+color:white;
+}</string>
+     </property>
+     <property name="placeholderText">
+      <string>Destination du Voyage</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="DestinationLabel">
+     <property name="geometry">
+      <rect>
+       <x>390</x>
+       <y>590</y>
+       <width>81</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Euclid Circular A</family>
+       <pointsize>10</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel{
+color:rgb(253,250,250);
+
+}</string>
+     </property>
+     <property name="text">
+      <string>Destination :</string>
+     </property>
+    </widget>
+    <widget class="QDateEdit" name="Date">
+     <property name="geometry">
+      <rect>
+       <x>160</x>
+       <y>620</y>
+       <width>110</width>
+       <height>22</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="DateLabel">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>620</y>
+       <width>111</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Euclid Circular A</family>
+       <pointsize>10</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel{
+color:rgb(253,250,250);
+
+}</string>
+     </property>
+     <property name="text">
+      <string>Date Du Voyage :</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="Title">
+     <property name="geometry">
+      <rect>
+       <x>300</x>
+       <y>70</y>
+       <width>361</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Euclid Circular A</family>
+       <pointsize>18</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel{
+color:rgb(253,250,250);
+qproperty-alignment: AlignCenter;
+
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="PrixBillet">
+     <property name="geometry">
+      <rect>
+       <x>480</x>
+       <y>650</y>
+       <width>113</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit{
+background-color:rgba(0, 0, 0, 0);
+border:none;
+border-bottom:2px solid qlineargradient(spread:pad, x1:0, y1:0.551, x2:0.857955, y2:0.579545, stop:0 rgba(28, 181, 224, 255), stop:0.676136 rgba(16, 105, 170, 255), stop:1 rgba(0, 0, 70, 255));
+qproperty-alignment: AlignCenter;
+padding-bottom:5px;
+color:rgb(157, 177, 202);
+}</string>
+     </property>
+     <property name="placeholderText">
+      <string>Prix Bilet en DT</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="PrixBilletLabel">
+     <property name="geometry">
+      <rect>
+       <x>390</x>
+       <y>650</y>
+       <width>81</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Euclid Circular A</family>
+       <pointsize>10</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel{
+color:rgb(253,250,250);
+
+}</string>
+     </property>
+     <property name="text">
+      <string>Prix Billet :</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="ClientCINLabel">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>560</y>
+       <width>81</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Euclid Circular A</family>
+       <pointsize>10</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel{
+color:rgb(157, 177, 202);
+
+}</string>
+     </property>
+     <property name="text">
+      <string>Client CIN</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="AfficherVoyageButton">
+     <property name="geometry">
+      <rect>
+       <x>650</x>
+       <y>-20</y>
+       <width>161</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Euclid Circular A</family>
+       <pointsize>10</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+       <kerning>true</kerning>
+      </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="focusPolicy">
+      <enum>Qt::TabFocus</enum>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+padding:10px;
+border-radius:20px;
+background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:0.773, y2:0, stop:0 rgba(0, 205, 222, 255), stop:0.965909 rgba(0, 143, 222, 255));
+/*background-color:qlineargradient(spread:pad, x1:0.0113636, y1:0.568, x2:1, y2:0.568136, stop:0 rgba(255, 166, 0, 255), stop:1 rgba(255, 213, 87, 255));*/
+color:rgb(243, 252, 255);
+
+}
+QPushButton:focus,QPushButton:hover{
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0.773, y2:0, stop:0 rgba(0, 205, 222, 255), stop:0.965909 rgba(0, 143, 222, 255));
+}</string>
+     </property>
+     <property name="text">
+      <string>Afficher un Voyage</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="SupprimerVoyageButton">
+     <property name="geometry">
+      <rect>
+       <x>420</x>
+       <y>-20</y>
+       <width>161</width>
+       <height>39</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Euclid Circular A</family>
+       <pointsize>10</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+       <kerning>true</kerning>
+      </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="focusPolicy">
+      <enum>Qt::TabFocus</enum>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+border-radius:18px;
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0.773, y2:0, stop:0 rgba(0, 205, 222, 255), stop:0.965909 rgba(0, 143, 222, 255));
+color:rgb(243, 252, 255);
+max-height:3em;
+border:none;
+}
+QPushButton:focus,QPushButton:hover{
+	
+background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:0.773, y2:0, stop:0 rgba(0, 143, 222, 255), stop:1 rgba(0, 205, 222, 255));
+}</string>
+     </property>
+     <property name="text">
+      <string>Supprimer un Voyage</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="ClientCIN">
+     <property name="geometry">
+      <rect>
+       <x>160</x>
+       <y>550</y>
+       <width>161</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit{
+background-color:rgba(0, 0, 0, 0);
+border:none;
+border-bottom:2px solid rgb(8, 195, 222);
+qproperty-alignment: AlignCenter;
+padding-bottom:5px;
+color:rgb(243, 244, 244);
+}</string>
+     </property>
+     <property name="placeholderText">
+      <string>Enter Client CIN</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="AjouterVoyageButton">
+     <property name="geometry">
+      <rect>
+       <x>210</x>
+       <y>-20</y>
+       <width>161</width>
+       <height>39</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Euclid Circular A</family>
+       <pointsize>10</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+       <kerning>true</kerning>
+      </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="focusPolicy">
+      <enum>Qt::TabFocus</enum>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+border-radius:18px;
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0.773, y2:0, stop:0 rgba(0, 205, 222, 255), stop:0.965909 rgba(0, 143, 222, 255));
+color:rgb(243, 252, 255);
+max-height:3em;
+border:none;
+}
+QPushButton:focus,QPushButton:hover{
+	
+background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:0.773, y2:0, stop:0 rgba(0, 143, 222, 255), stop:1 rgba(0, 205, 222, 255));
+}</string>
+     </property>
+     <property name="text">
+      <string>Ajouter un Voyage</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="AjouterButton">
+     <property name="geometry">
+      <rect>
+       <x>280</x>
+       <y>650</y>
+       <width>161</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Euclid Circular A</family>
+       <pointsize>10</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+       <kerning>true</kerning>
+      </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="focusPolicy">
+      <enum>Qt::TabFocus</enum>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+border-radius:14px;
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0.773, y2:0, stop:0 rgba(0, 205, 222, 255), stop:0.965909 rgba(0, 143, 222, 255));
+color:rgb(243, 252, 255);
+border:none;
+}
+QPushButton:focus,QPushButton:hover{
+	
+background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:0.773, y2:0, stop:0 rgba(0, 143, 222, 255), stop:1 rgba(0, 205, 222, 255));
+}</string>
+     </property>
+     <property name="text">
+      <string>Ajouter</string>
+     </property>
+    </widget>
+    <widget class="QTableView" name="tableView">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>540</y>
+       <width>561</width>
+       <height>301</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QTableView:item:selected{
+		selection-color:white;
+		background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:0.773, y2:0, stop:0 rgba(0, 205, 222, 255), stop:0.965909 rgba(0, 143, 222, 255));
+	alternate-background-color:red;	
+
+}
+QTableVeiw{
+outline: none;
+}
+
+QTableView::item:focus{border:none;outline: none;}
+QTableView::item:selected{border:none;outline: none;}
+
+</string>
+     </property>
+     <property name="verticalScrollBarPolicy">
+      <enum>Qt::ScrollBarAsNeeded</enum>
+     </property>
+     <property name="horizontalScrollBarPolicy">
+      <enum>Qt::ScrollBarAsNeeded</enum>
+     </property>
+     <property name="selectionMode">
+      <enum>QAbstractItemView::SingleSelection</enum>
+     </property>
+     <property name="selectionBehavior">
+      <enum>QAbstractItemView::SelectItems</enum>
+     </property>
+     <property name="gridStyle">
+      <enum>Qt::SolidLine</enum>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="DeleteButton">
+     <property name="geometry">
+      <rect>
+       <x>560</x>
+       <y>590</y>
+       <width>161</width>
+       <height>39</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Euclid Circular A</family>
+       <pointsize>10</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+       <kerning>true</kerning>
+      </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="focusPolicy">
+      <enum>Qt::TabFocus</enum>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+border-radius:16px;
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0.773, y2:0, stop:0 rgba(0, 205, 222, 255), stop:0.965909 rgba(0, 143, 222, 255));
+color:rgb(243, 252, 255);
+max-height:3em;
+border:none;
+}
+QPushButton:focus,QPushButton:hover{
+	
+background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:0.773, y2:0, stop:0 rgba(0, 143, 222, 255), stop:1 rgba(0, 205, 222, 255));
+}</string>
+     </property>
+     <property name="text">
+      <string>Delete</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="SelectLigne">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>126</y>
+       <width>461</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Euclid Circular A</family>
+       <pointsize>12</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel{
+color:rgb(253,250,250);
+qproperty-alignment: AlignCenter;
+
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="ModifierVoyageButton">
+     <property name="geometry">
+      <rect>
+       <x>420</x>
+       <y>60</y>
+       <width>161</width>
+       <height>39</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Euclid Circular A</family>
+       <pointsize>10</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+       <kerning>true</kerning>
+      </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="focusPolicy">
+      <enum>Qt::TabFocus</enum>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+border-radius:18px;
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0.773, y2:0, stop:0 rgba(0, 205, 222, 255), stop:0.965909 rgba(0, 143, 222, 255));
+color:rgb(243, 252, 255);
+max-height:3em;
+border:none;
+}
+QPushButton:focus,QPushButton:hover{
+	
+background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:0.773, y2:0, stop:0 rgba(0, 143, 222, 255), stop:1 rgba(0, 205, 222, 255));
+}</string>
+     </property>
+     <property name="text">
+      <string>Modifier un Voyage</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="Update">
+     <property name="geometry">
+      <rect>
+       <x>560</x>
+       <y>570</y>
+       <width>161</width>
+       <height>39</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Euclid Circular A</family>
+       <pointsize>10</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+       <kerning>true</kerning>
+      </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="focusPolicy">
+      <enum>Qt::TabFocus</enum>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+border-radius:16px;
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0.773, y2:0, stop:0 rgba(0, 205, 222, 255), stop:0.965909 rgba(0, 143, 222, 255));
+color:rgb(243, 252, 255);
+max-height:3em;
+border:none;
+}
+QPushButton:focus,QPushButton:hover{
+	
+background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:0.773, y2:0, stop:0 rgba(0, 143, 222, 255), stop:1 rgba(0, 205, 222, 255));
+}</string>
+     </property>
+     <property name="text">
+      <string>Update</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="ModifierCIN">
+     <property name="geometry">
+      <rect>
+       <x>900</x>
+       <y>-10</y>
+       <width>113</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit{
+
+background-color:rgb(206, 206, 206);
+border:none;
+color:rgb(130,130,130);
+}</string>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="ModifierDestination">
+     <property name="geometry">
+      <rect>
+       <x>900</x>
+       <y>-10</y>
+       <width>113</width>
+       <height>20</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="ModifierDateVoyage">
+     <property name="geometry">
+      <rect>
+       <x>900</x>
+       <y>-10</y>
+       <width>113</width>
+       <height>20</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="ModifierPrixBillet">
+     <property name="geometry">
+      <rect>
+       <x>900</x>
+       <y>-10</y>
+       <width>125</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+    </widget>
+    <widget class="QTableView" name="tableViewUpdate">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>540</y>
+       <width>561</width>
+       <height>301</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_2">
+    <attribute name="title">
+     <string>Statisitique</string>
+    </attribute>
+   </widget>
+   <widget class="QWidget" name="tab_4">
+    <attribute name="title">
+     <string>Promotion</string>
+    </attribute>
+   </widget>
+   <widget class="QWidget" name="tab_3">
+    <attribute name="title">
+     <string>Page</string>
+    </attribute>
+   </widget>
+   <widget class="QWidget" name="tab_5">
+    <attribute name="title">
+     <string>Page</string>
+    </attribute>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,33 @@
+QTabWidget::pane{
+poistion:absolute;
+}
+QTabWidget::tab-bar{
+	bottom:1px;
+	left:1.75px
+}
+
+QTabBar{
+  background-color:white;
+	border-radius:5px;
+	margin-top:1px;
+}
+
+QTabBar::tab {
+	color:rgb(1,3,52);
+	border:none;
+	min-width:9em;
+	min-height:3em;
+	margin-right:5px;
+
+}
+QTabBar::tab::hover,QTabBar::tab::selected{
+	color:rgb(33,86,250);
+
+}
+QTabBar::tab::selected{
+	border-bottom:4px solid rgb(33,86,250);
+}
+QTabBar::tab:!selected{
+margin-top:4px;
+}
+

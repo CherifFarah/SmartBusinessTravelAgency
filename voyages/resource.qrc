@@ -1,0 +1,18 @@
+<RCC>
+    <qresource prefix="/new/prefix1">
+        <file>euclid_font.ttf</file>
+        <file>Roboto-Light.ttf</file>
+        <file>background.png</file>
+    </qresource>
+    <qresource prefix="/new/image">
+        <file>addFlight.png</file>
+        <file>deleteFlight.png</file>
+        <file>readFlight.png</file>
+        <file>310854027_888773202403234_5699097632723795022_n.png</file>
+        <file>310872201_1083746015839046_8454577185135222411_n.png</file>
+        <file>account (1).png</file>
+        <file>lock.png</file>
+        <file>background.png</file>
+        <file>backg.png</file>
+    </qresource>
+</RCC>
